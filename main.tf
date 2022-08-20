@@ -28,16 +28,6 @@ module "vpc" {
  
 }
 
-# -------------------------------------------------------
-# QUESTION 02
-# -------------------------------------------------------
-# I have used kOps (Kubernetes Operations) to deploy the Kubernetes Cluster on the created AWS VPC
-# Prior deploying I have created an S3 bucket(bayes-esports-assignment-kops-bucket)in us-east-1 to manage the kOps state file
-# Here I have used Terraform "local-exec" provisioner type to invoke a local executable after a resource is created
-# Passed all the aurguments necessary for the private network topolgy cluster creation
-# for Assignment purpose I have used a single-master approach; But when creating for production setup it is recommended to go with multi-master setup.
-# That way, if a master node is terminated the ASG will launch a new master instance with the master's volume. Because of the dedicated EBS volumes, each master is bound to a fixed Availability Zone (AZ). If the AZ becomes unavailable, the master instance in that AZ will also become unavailable.
-# To connect to Kube cluster and manipluate with it, I have used a bastion server and deployed an nginx 
 
 # Null resource to provision kOps Kubernetes cluster
 resource "null_resource" "kops_cluster_provisioner" {
