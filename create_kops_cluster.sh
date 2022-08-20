@@ -11,7 +11,7 @@ export KOPS_STATE_STORE=s3://bayes-esports-assignment-kops-bucket
 
 # Cluster creation
 kops create cluster $5 \
-       --state "s3://bayes-esports-assignment-kops-bucket" \
+       --state "s3://kops-s3-bucket-for-state" \
        --zones=$2,$3,$4  \
        --master-count=1 \
        --master-size=t2.medium \
