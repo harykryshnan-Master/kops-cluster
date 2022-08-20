@@ -1,15 +1,5 @@
-# Bayes DevOps Assignment - Question 01 and 02
 # Author - Navindu Jayatilake
 
-# -----------------------------------------------------
-# QUESTION 01
-# -----------------------------------------------------
-# Public and Privately Routes VPC
-# VPC with public and private subnets spanned across 3 AZs
-# Assuming this network is used by a large organization I have defined VPC network range with /16 Netmask(VPC Size = Large), also to set aside some IP address
-# Assumed VPC network range (CIDR block) does not overlap with organization's other private network ranges
-# Devided VPC network range evenly across all Availability Zones in the region (us-east-1a, us-east-1b, us-east-1c)
-# Created one subnet per available AZ
 
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
