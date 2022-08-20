@@ -10,7 +10,7 @@ provider "aws" {
 # If the the state is locked - can get it unlocked using "terraform force-unlock <LockID> "
 terraform {
   backend "s3" {
-    bucket = "bayes-esports-assignment-tfstate-bucket"
+    bucket = "some-project-name-tfstate-bucket"
     key = "terraform-state-files/prod/prod.terraform.tfstate"
     region = "us-east-1"
     profile = "default"
