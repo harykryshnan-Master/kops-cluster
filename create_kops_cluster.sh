@@ -6,7 +6,7 @@
 # Note: here we have used existing VPC and Subnets to deploy our cluster. Hence, we should use utility-subnets, topology and networking options
 
 # Export the kOps state
-export KOPS_STATE_STORE=s3://bayes-esports-assignment-kops-bucket
+export KOPS_STATE_STORE=s3://kops-cluster-25
 
 
 # Cluster creation
